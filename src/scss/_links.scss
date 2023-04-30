@@ -1,0 +1,9 @@
+a {
+    font-weight: 500;
+    color: var(--color-main);
+    text-decoration: inherit;
+    border-bottom: .1em solid;
+  }
+  a:hover {
+    color: var(--color-main-dark);
+  }
