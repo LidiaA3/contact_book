@@ -28,6 +28,17 @@ body {
     margin: 1rem;
 }
 
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    &__icon {
+        filter: none;
+    }
+}
+
 .section {
     display: flex;
     flex-direction: column;

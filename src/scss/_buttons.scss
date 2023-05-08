@@ -10,14 +10,33 @@ button,
     cursor: pointer;
     transition: border-color 0.25s;
     color: var(--color-light);
+    fill: var(--color-light);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
 
     &:hover {
         color: var(--color-light);
+        fill: var(--color-light);
         background-color: var(--color-main-dark);
     }
 
     &:focus,
     &:focus-visible {
         outline: 4px auto;
+    }
+
+    & img {
+        filter: none;
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    &__back {
+        font-size: 1.2rem;
+        position: absolute;
+        top: 2rem;
+        left: 1rem;
     }
   }
