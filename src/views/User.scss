@@ -1,19 +1,42 @@
 .usercard {
     display: flex;
+    flex-direction: column;
     position: relative;
     width: fit-content;
     align-items: stretch;
     gap: 2rem;
-    padding: 3rem 2rem;
-    margin: 5rem auto;
+    padding: 2rem;
+    margin: 0 auto;
     background-color: #ffffff;
     border: .1em solid var(--color-main);
     border-radius: .5em;
     box-shadow: 0 0 2rem 0 #1c1c1e3c;
+    font-size: 2rem;
+    font-weight: 300;
 
-    &__section {
+    &__present {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    &__img {
+        border-radius: .5em;
+        width: 20rem;
+        aspect-ratio: 1;
+    }
+
+    &__dni {
+        font-size: 2.4rem;
+        font-weight: inherit;
+    }
+
+    &__contents {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 0;
         gap: 1rem;
     }
 
@@ -22,45 +45,41 @@
         flex-direction: column;
     }
 
-    &__subsection {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        margin: .5em 0;
-    }
-
-    &__img {
-        border-radius: .5em;
-        width: 15rem;
-    }
-
-    &__dni {
-        font-size: 2.4;
-        font-weight: 200;
-        text-align: center;
-        margin: .2em 0;
-    }
-
-    &__name {
-        font-size: 2.8rem;
-        font-weight: 400;
-        margin: 0;
+    &__tittle {
+        font-size: 3.2rem;
+        font-weight: bold;
         color: var(--color-main);
     }
 
-    &__text {
+    &__subtittle {
         font-size: 1.8rem;
-        margin: 0 0 .8em 0;
     }
 
-    &__small {
-        font-size: 1.2rem;
-        margin: 0;
+    &__info {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 2rem 0;
+        gap: 3rem;
+    }
+
+    &__subsection {
+        display: flex;
+        flex-direction: column;
     }
 
     &__bd {
         position: absolute;
-        bottom: 1.2rem;
+        bottom: 1.5rem;
         right: 1.8rem;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .usercard {
+        padding: 4rem 7rem;
+        gap: 3rem;
+        flex-direction: row;
+        margin: 5rem auto;
     }
 }

@@ -17,30 +17,51 @@ body {
     color: var(--color-dark);
     background-color: var(--color-light);
     font-size: 1.8rem;
+    font-weight: 400;
     min-width: 320px;
 }
 
+@import 'typography';
 @import 'links';
 @import 'buttons';
 @import 'images';
-
-#root {
-    margin: 1rem;
-}
 
 .header {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 3rem 2rem;
     gap: 1rem;
 
     &__icon {
         filter: none;
+        width: 6.4rem;
     }
 }
 
 .section {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    padding: 0 2rem;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    max-width: 1200px;
+}
+
+@media all and (min-width: 600px) {
+    .section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media all and (min-width: 800px) {
+    .section {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media all and (min-width: 1200px) {
+    .section {
+        padding-left: calc((100% - 1200px) / 2);
+        padding-right: calc((100% - 1200px) / 2);
+    }
 }

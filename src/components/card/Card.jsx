@@ -8,7 +8,7 @@ function Card(props) {
         <div className="card">
             <img src={props.img} alt="" />
             <div className="card__contents">
-                <h3 className="card__tittle">{props.name}</h3>
+                <h2 className="card__tittle">{props.name}</h2>
                 <p className="card__text">{props.email}</p>
                 <Link className="card__link" to={'/user/' + props.id}>more info</Link>
             </div>
