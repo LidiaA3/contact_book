@@ -1,0 +1,19 @@
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    gap: 1rem;
+
+    &__input {
+        background-color: var(--color-light);
+        border: .1em solid var(--color-main);
+        border-radius: .5em;
+        padding: .5em 1em;
+        min-width: 35rem;
+    }
+
+    &__btn {
+        padding: .3em 1em;
+    }
+}
