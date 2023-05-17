@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Card from "../components/card/Card"
 import Search from "../components/search/Search";
 
@@ -8,9 +8,11 @@ function Home(props) {
 
   function handleChange(e) {
     setInputValue(e.target.value);
-    setListToShow(props.elements.filter(user => user.email.includes(inputValue)));
-    console.log(listToShow);
   }
+
+  useEffect(() => {
+    setListToShow(props.elements.filter(user => user.email.includes(inputValue)));
+  }, [inputValue])
 
   return (
     <>

@@ -10,7 +10,7 @@ function App() {
   const [list, setList] = useState([]);
 
   useEffect(() => {
-    fetch('https://randomuser.me/api/?nat=es&results=60')
+    fetch('https://randomuser.me/api/?nat=es&results=120')
       .then(res => res.json())
       .then(data => setList(data.results))
   },[])
