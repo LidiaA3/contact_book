@@ -4,21 +4,20 @@ import Search from "../components/search/Search";
 
 function Home(props) {
   const [inputValue, setInputValue] = useState('');
-  const [listToShow, setListToShow] = useState([...props.elements]);
+
+  function filterList(list) {
+    return list.filter(user => user.email.includes(inputValue));
+  }
 
   function handleChange(e) {
     setInputValue(e.target.value);
   }
 
-  useEffect(() => {
-    setListToShow(props.elements.filter(user => user.email.includes(inputValue)));
-  }, [inputValue])
-
   return (
     <>
     <Search handleChange={handleChange} />
     <div className="section">
-      {listToShow.map((user) => {
+      {filterList(props.elements).map((user) => {
           return <Card key={user.login.salt} id={user.login.salt} img={user.picture.large} name={user.name.first + ' ' + user.name.last} email={user.email} />
       })}
     </div>
