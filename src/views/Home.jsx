@@ -10,7 +10,7 @@ function Home(props) {
   }
 
   function handleChange(e) {
-    setInputValue(e.target.value);
+    setInputValue(e.target.value.toLowerCase());
   }
 
   return (
