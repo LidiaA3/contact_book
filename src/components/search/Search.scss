@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
     gap: 1rem;
 
     &__input {
@@ -10,7 +10,8 @@
         border: .1em solid var(--color-main);
         border-radius: .5em;
         padding: .5em 1em;
-        min-width: 35rem;
+        flex: 0 1 35rem;
+        max-width: 35rem;
     }
 
     &__btn {
